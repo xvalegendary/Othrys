@@ -1,0 +1,46 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = OthrysBoot
+  FILE_GUID                      = 6B7C8D9E-0F1A-4C23-B4D5-E6F7A8B9CADB
+  MODULE_TYPE                    = UEFI_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = OthrysBootEntry
+
+[Sources]
+  main.c
+  secureboot.c
+  tcg2hook.c
+  ntfs.c
+  pe_parser.c
+  memscan.c
+  efi_pe_loader.c
+  mapper.c
+  shellcode.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  OthrysBootPkg/OthrysBootPkg.dec
+
+[LibraryClasses]
+  BaseLib
+  BaseMemoryLib
+  UefiLib
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UefiDriverEntryPoint
+  MemoryAllocationLib
+  PrintLib
+  DevicePathLib
+
+[Protocols]
+  gEfiBlockIoProtocolGuid
+  gEfiDiskIoProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiLoadedImageProtocolGuid
+
+[Guids]
+  gEfiGlobalVariableGuid
+  gEfiImageSecurityDatabaseGuid
+
+[Depex]
+  gEfiBlockIoProtocolGuid

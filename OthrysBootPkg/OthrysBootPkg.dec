@@ -1,0 +1,11 @@
+[Defines]
+  DEC_SPECIFICATION              = 0x00010005
+  PACKAGE_NAME                   = OthrysBootPkg
+  PACKAGE_GUID                   = 4F5A6B7C-8D9E-4A01-B2C3-D4E5F6A7B8C9
+  PACKAGE_VERSION                = 1.00
+
+[Includes]
+  include
+
+[Guids]
+  gOthrysBootTokenSpaceGuid      = { 0x4F5A6B7C, 0x8D9E, 0x4A01, { 0xB2, 0xC3, 0xD4, 0xE5, 0xF6, 0xA7, 0xB8, 0xC9 } }
